@@ -22,18 +22,6 @@ pipeline {
                     archiveArtifacts artifacts : '**/*.war'
                 }
             }
-         stage ('deploy build in staging area'){
-             steps {
-                     build job : 'deploy_stagingarea_pipeline'
-                }
-             }
-             stage ('Deploy Build in Staging Area'){
-            steps{
-
-                build job : 'deploy_stagingarea_pipeline'
-
-            }
-        }
          }
     }
 }
